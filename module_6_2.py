@@ -28,7 +28,6 @@ class Vehicle:
         else:
             print(f"Нельзя сменить цвет на {new_color}")
 
-
 class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
 
@@ -36,16 +35,12 @@ class Sedan(Vehicle):
         super().__init__(owner, model, color, engine_power)
 
 
-# Пример использования
 vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
 
-# Изначальные свойства
 vehicle1.print_info()
 
-# Меняем свойства (в т.ч. вызывая методы)
-vehicle1.set_color('Pink')  # Неправильный цвет
-vehicle1.set_color('BLACK')  # Правильный цвет
-vehicle1.owner = 'Vasyok'  # Меняем владельца
+vehicle1.set_color('Pink')
+vehicle1.set_color('BLACK')
+vehicle1.owner = 'Vasyok'
 
-# Проверяем что поменялось
 vehicle1.print_info()
